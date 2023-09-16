@@ -1,0 +1,25 @@
+{
+    // dotnet7.0固定のビルド済みコンテナイメージを使用します。
+    "image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
+    // codespaceの名前として表示されます。
+    "name": "dev-container-current",
+    "customizations": {
+      "vscode": {
+        // 予めインストールする拡張機能を指定できます。
+        "extensions": [
+          // MSが提供する、c#開発に必要なものがひとまとめになっている拡張機能です。
+          "ms-dotnettools.csdevkit"
+        ]
+      }
+    },
+    "forwardPorts": [5000, 5001],
+    "portsAttributes": {
+      "5001": {
+        "protocol": "https"
+      }
+    },
+    // コンテナが作成された後実行されるコマンドを指定します。
+    // コンテナを作り直す度実行されるので、dotnet newなど一度だけ実行したいものはここではなくDockerfileで指定します。
+    // ここではNugetから取得するライブラリ等を再取得します。
+    "postCreateCommand": "dotnet restore"
+  }
