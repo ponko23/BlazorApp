@@ -1,6 +1,11 @@
 # Blazor WASM App on GitHub Codespaces Template
+There are the stepsfor SPA development using ASP.net BlazorWASM on GitHub Codespaces.
+## Usage package
+[jsakamoto/PublishSPAforGitHubPages.Build](https://github.com/jsakamoto/PublishSPAforGitHubPages.Build)
+>This is a NuGet package that provides post published processing to deploy the .NET Core SPA project (such as Blazor WebAssembly) as a GitHub pages site.
 
 ## Create new GitHub Repogitory
+select **Visual Studio** template with **Add .gitignore**
 ## Open WebEditor
 push [ **.** ] key
 ## Add devcontainer setting
@@ -120,8 +125,13 @@ file name: `.vscode/launch.json`
 1. push Ctrl + Shift + p keys, open command palet
 1. type `continue working in new codespace`
 ## Create new blazor project & solution & some packages
-`dotnet new blazorwasm -f net7.0 -p -o BlazorApp && dotnet new sln && dotnet sln add BlazorApp && dotnet add BlazorApp package PublishSPAforGitHubPages.Build`
-## Run Debug
+copy & paste this command into the Terminal and execute it.
+```
+dotnet new blazorwasm -f net7.0 -p -o BlazorApp && dotnet new sln && dotnet sln add BlazorApp && dotnet add BlazorApp package PublishSPAforGitHubPages.Build
+```
+## Debug Run
 push F5 key
 ## Deploy
 only commit & push, run GitHub Actions
+
+Check the URL on the GitHub Actions Page. 
