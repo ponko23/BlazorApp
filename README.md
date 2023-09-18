@@ -119,11 +119,9 @@ file name: `.vscode/launch.json`
 ## Start GitHub Codespaces
 1. push Ctrl + Shift + p keys, open command palet
 1. type `continue working in new codespace`
-
 ## Create new blazor project & solution & some packages
 `dotnet new blazorwasm -f net7.0 -p -o BlazorApp && dotnet new sln && dotnet sln add BlazorApp && dotnet add BlazorApp package PublishSPAforGitHubPages.Build`
-
 ## Run Debug
-
+push F5 key
 ## Deploy
 only commit & push, run GitHub Actions
