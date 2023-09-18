@@ -3,6 +3,9 @@
     "image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
     // codespaceの名前として表示されます。
     "name": "dev-container",
+    "features": {
+      "ghcr.io/devcontainers/features/dotnet:2": {}
+    },
     "customizations": {
       "vscode": {
         // 予めインストールする拡張機能を指定できます。
@@ -12,7 +15,7 @@
         ]
       }
     },
-    "forwardPorts": [5000, 5001],
+    "forwardPorts": [5000],
     "portsAttributes": {
       "5001": {
         "protocol": "https"

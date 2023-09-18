@@ -127,7 +127,7 @@ file name: `.vscode/launch.json`
 ## Create new blazor project & solution & some packages
 copy & paste this command into the Terminal and execute it.
 ```
-dotnet new blazorwasm -f net7.0 -p -o BlazorApp && dotnet new sln && dotnet sln add BlazorApp && dotnet add BlazorApp package PublishSPAforGitHubPages.Build
+dotnet new blazorwasm -f net7.0 -o BlazorApp && dotnet new sln && dotnet sln add BlazorApp && dotnet add BlazorApp package PublishSPAforGitHubPages.Build
 ```
 ## Debug Run
 push F5 key

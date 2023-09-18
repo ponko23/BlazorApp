@@ -1,0 +1,37 @@
+@page "/shoppinglist"
+
+<PageTitle>Shopping List</PageTitle>
+
+<h1>List</h1>
+
+<ul>
+    @foreach(var item in items)
+    {
+        <li>
+            <input type="text" @bind=item.Name />
+            <input type="number" @bind=item.Price />
+            <input type="text" @bind=item.ShopName />
+            <span>@item.LastBuyDate.ToString("yyyy/MM/dd")</span>
+        </li>
+    }
+</ul>
+<button @onclick="AddItem">Add Item</button>
+
+@code {
+    private List<ShoppingListItem> items = new List<ShoppingListItem>();
+    
+    private void AddItem()
+    {
+        items.Add(new ShoppingListItem());
+    }
+
+    public class ShoppingListItem
+    {
+        public string Name { get;set; }
+
+        public int Price { get; set; }
+        public string ShopName { get; set; }
+        public DateTime LastBuyDate { get; set;}
+
+    }
+}
